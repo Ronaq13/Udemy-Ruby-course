@@ -1,25 +1,30 @@
-puts "Hello World!!"
+# function defination
+# return from a function
+# arguments, default argument
+# puts function
+
+def journey
+    puts "First visit Berlin"
+    puts "Then visited Munich"
+    puts "Finally came back home to Dresden"
+end
+
+def add(num1, num2 = 10)
+    num1 + num2
+end
+
+sum = add 2,3
+puts sum
+
+sum2 = add 2
+puts sum2
 
 
-# Variables
-# 1. Lowercase letter or underscore
-# 2. Heterogeneous 
-# 3. Uninitialized local variables -> method calls
-# 4. Scope -> current block
-
-cars = 2
-puts cars
-
-cars = "BMW, Audi"
-puts cars
+# puts "printing something to console" -> puts("printing something to console")
 
 
-# Global variables
-$car_company = "ABC pvt.ltd"
-puts $car_company
 
 
-# Scope ??
 
-# Class variables
-# Instance variables
+
+
