@@ -1,30 +1,19 @@
-# function defination
-# return from a function
-# arguments, default argument
-# puts function
+# String: interpolation, mutable addition;freeze , compairing
+# Numbers: Integer and float, Underscore at thousand, Modulus(%) sign
 
-def journey
-    puts "First visit Berlin"
-    puts "Then visited Munich"
-    puts "Finally came back home to Dresden"
-end
+name = "Sam"
 
-def add(num1, num2 = 10)
-    num1 + num2
-end
+greeting = "Hi!! I am #{ name }."
 
-sum = add 2,3
-puts sum
+result = greeting == " Today is a good day!!"
 
-sum2 = add 2
-puts sum2
+# puts result
 
+# Numbers
 
-# puts "printing something to console" -> puts("printing something to console")
+num1 = 10
+num2 = 3
 
+result = num1 % num2
 
-
-
-
-
-
+puts result
