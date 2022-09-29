@@ -1,40 +1,26 @@
-# Array: Collection on objects. Generally same type
+# Hash: Unique key value store
 
-# decleration %w{}, []
-            # 0       1        2
-            # -3        -2      -1
-fruits = ["Apple","Orange","Banana"]
-fruits2 = %w{ Apple Orange Banana }
+# Decleration
+person = { name: "Raounak", age: 25 }
+p person
 
-# size .length
-puts fruits2.length
+# Adding a value
+person[:address] = "Germany"
+p person
 
-
-# adding
-fruits << "Grapes"
-p fruits
-p fruits.length
-
-# Replacing
-fruits[0] = "Cherry"
-p fruits
-
-# deleting; delete_at; delete
-# fruits.delete_at(0)
-# p fruits
-
-# fruits.delete("Grapes")
-# p fruits
-
-# accessing, from last[-1]
-p fruits[-1]
-p fruits[-2]
+# Accessing
+puts "Name of the person is: #{ person[:name] }"
 
 
-# accessing out of bound
-p fruits[1000]
+# Default value
+person.default = "This key is not present"
+puts "Name of the person is: #{ person[:namee] }"
 
 
-# Strings as array. Array of characters
-greeting = "Hi!! I am Raounak"
-p greeting[-1]
+# Delete a key
+person.delete(:age)
+p person
+
+# Deleting all; clear
+person.clear
+p person
