@@ -1,26 +1,8 @@
-# Hash: Unique key value store
+# Symbols: Similar(immutable and memory storage) to strings; used as identifiers
 
-# Decleration
-person = { name: "Raounak", age: 25 }
-p person
+# Declaration (vs String)
+:name
 
-# Adding a value
-person[:address] = "Germany"
-p person
+# Accessing/Modifying: None because immutable
 
-# Accessing
-puts "Name of the person is: #{ person[:name] }"
-
-
-# Default value
-person.default = "This key is not present"
-puts "Name of the person is: #{ person[:namee] }"
-
-
-# Delete a key
-person.delete(:age)
-p person
-
-# Deleting all; clear
-person.clear
-p person
+# Stings -> when data is important; Symbols -> when identification is important
