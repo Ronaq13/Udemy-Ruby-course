@@ -1,15 +1,19 @@
-# Block: A block is always invoked with a function or can say passed to a method call
-# Invoke a block: yield; &block
+# Lambda
 
-def car_running(car_number)
+def car_running(car_number, lambda)
     puts "My car number is: #{car_number}"
     puts "Running in the method"
-    yield
+    lambda.call(car_number)
     puts "Running in the method again"
 end
 
-car_running(23) do
-    puts "Starting in the block"
-    puts "Running in the block"
-    puts "end of the block"
+journey = ->(car_number) do
+    puts "Running in lambda with car number: #{car_number}"
+    puts "Starting in the lambda"
+    puts "Running in the lambda"
+    puts "end of the lambda"
 end
+
+car_running(23, journey)
+car_running(34, journey)
+
