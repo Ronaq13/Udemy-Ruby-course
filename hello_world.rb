@@ -1,19 +1,26 @@
-# Traversing Hash: each, each_key, each_value
+# Conditional structures: if-else, unless, case
 
-vehicles = {
-    car: 'Audi A4',
-    bike: 'Yamaha R1',
-    truck: 'Tesla truck'
-}
+age = 25
 
-vehicles.each do |key, value|
-    puts "I have a #{key} model: #{value}"
+if (age > 24)
+    puts "You are an adult"
+else
+    puts "You are NOT an adult"
 end
 
-vehicles.each_key do |key|
-    puts "I have a #{key}"
+puts "YOu are 25 years old" if age == 25
+
+unless age > 15
+    puts "You are a child"
+else
+    puts "You are an adult"
 end
 
-vehicles.each_value do |value|
-    puts "I have a #{value}"
+case age
+when 15
+    puts "You are a child"
+when 25
+    puts "You are an adult"
+else
+    puts "I don't know about you"
 end
