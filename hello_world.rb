@@ -1,15 +1,19 @@
-# Traversing array: each, each_with_index
+# Traversing Hash: each, each_key, each_value
 
-cars = ['Audi A4', 'BMW i8', 'Mercedes Benz']
+vehicles = {
+    car: 'Audi A4',
+    bike: 'Yamaha R1',
+    truck: 'Tesla truck'
+}
 
-# for car in cars do 
-#     puts "I have a #{car} car"
-# end
-
-cars.each do |car|
-    puts "I have a #{car} car"
+vehicles.each do |key, value|
+    puts "I have a #{key} model: #{value}"
 end
 
-cars.each_with_index do |car, index|
-    puts "I have a #{car} car. It is parked at #{index} floor"
+vehicles.each_key do |key|
+    puts "I have a #{key}"
+end
+
+vehicles.each_value do |value|
+    puts "I have a #{value}"
 end
