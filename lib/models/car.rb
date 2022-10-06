@@ -10,4 +10,3 @@ class Car
         puts "It's model number is 41v"
     end
 end
-
