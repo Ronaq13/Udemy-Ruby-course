@@ -5,10 +5,21 @@
 
 class Car
 
+	@@cars_count = 0
+
+	def self.increment_cars_count
+		@@cars_count += 1
+	end
+
+	def self.get_cars_count
+		@@cars_count
+	end
+
 	def initialize(model, colour, wheels = 4)
 		@model = model
 		@colour = colour
 		@wheels = wheels
+		self.class.increment_cars_count
 	end
 
 	def describe
