@@ -4,9 +4,16 @@
 # 4 fundamentals of OOPs: Abstraction, Encapsulation, Inheritance, Polymorphism 
 
 class Car
-    def describe
-        puts "It has 4 wheels"
-        puts "It's colour is black"
-        puts "It's model number is 41v"
-    end
+
+	def initialize(model, colour, wheels = 4)
+		@model = model
+		@colour = colour
+		@wheels = wheels
+	end
+
+	def describe
+		puts "It has #{@wheels} wheels"
+		puts "It's colour is #{@colour}"
+		puts "It's model is #{@model}"
+	end
 end
