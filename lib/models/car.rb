@@ -5,6 +5,9 @@
 
 class Car
 
+	attr_reader :model, :colour, :wheels
+	attr_writer :model, :colour, :wheels
+
 	@@cars_count = 0
 
 	def self.increment_cars_count
@@ -23,8 +26,8 @@ class Car
 	end
 
 	def describe
-		puts "It has #{@wheels} wheels"
-		puts "It's colour is #{@colour}"
-		puts "It's model is #{@model}"
+		puts "It has #{wheels} wheels"
+		puts "It's colour is #{colour}"
+		puts "It's model is #{model}"
 	end
 end
