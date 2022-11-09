@@ -1,11 +1,11 @@
 require_relative 'vehicle'
 
-class Car < Vehicle
-	def self.get_cars_count
+class Bike < Vehicle
+	def self.get_bikes_count
 		self.get_vehicles_count
 	end
 
-	def initialize(model, colour, wheels = 4)
+	def initialize(model, colour, wheels = 2)
 		super(model, colour, wheels)
 	end
 end
