@@ -11,8 +11,7 @@ class Bike < Vehicle
 
 	def describe
 		puts "------- Bike -----------"
-		puts "It has #{wheels} wheels"
-		puts "It's colour is #{colour}"
-		puts "It's model is #{model}"
+		super
+		puts "########################"
 	end
 end
