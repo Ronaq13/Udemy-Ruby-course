@@ -8,4 +8,11 @@ class Car < Vehicle
 	def initialize(model, colour, wheels = 4)
 		super(model, colour, wheels)
 	end
+
+	def describe
+		puts "------- Car -----------"
+		puts "It has #{wheels} wheels"
+		puts "It's colour is #{colour}"
+		puts "It's model is #{model}"
+	end
 end
