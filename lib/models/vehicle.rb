@@ -24,4 +24,25 @@ class Vehicle
 		puts "It's colour is #{colour}"
 		puts "It's model is #{model}"
 	end
+
+	def compare_mileage(other_vehicle)
+		my_mileage = self.calculate_mileage
+		other_mileage = other_vehicle.calculate_mileage
+		winner_vehicle = my_mileage > other_mileage ? self : other_vehicle
+		puts "#{winner_vehicle.model} has more mileage"
+	end
+
+	protected
+
+	def calculate_mileage
+		distance = gets.chomp.to_i
+		fuel = gets.chomp.to_i
+		mileage_calculator(distance, fuel)
+	end 
+
+	private
+
+	def mileage_calculator(distance, fuel)
+		distance/fuel
+	end
 end
