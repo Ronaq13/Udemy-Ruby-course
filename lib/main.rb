@@ -18,4 +18,7 @@ puts Car.get_cars_count
 s1000rr = Bike.new('BMW S1000RR', 'white')
 s1000rr.describe
 
-s1000rr.compare_mileage(audi)
+# s1000rr.compare_mileage(audi)
+
+puts audi.rims_cost
+puts s1000rr.rims_cost

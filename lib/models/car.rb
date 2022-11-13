@@ -14,4 +14,8 @@ class Car < Vehicle
 		super
 		puts "***********************"
 	end
+
+	def rims_cost
+		wheels * 100
+	end
 end

@@ -19,6 +19,10 @@ class Vehicle
 		self.class.increment_vehicles_count
 	end
 
+	def rims_cost
+		raise 'Not implemented'
+	end
+
 	def describe
 		puts "It has #{wheels} wheels"
 		puts "It's colour is #{colour}"
