@@ -34,6 +34,8 @@ class Vehicle
 		other_mileage = other_vehicle.calculate_mileage
 		winner_vehicle = my_mileage > other_mileage ? self : other_vehicle
 		puts "#{winner_vehicle.model} has more mileage"
+	rescue ArgumentError
+		puts 'Something went wrong!!'
 	end
 
 	protected
@@ -48,5 +50,7 @@ class Vehicle
 
 	def mileage_calculator(distance, fuel)
 		distance/fuel
+	rescue ZeroDivisionError
+		puts 'Fuel cannot be zero!!'
 	end
 end
