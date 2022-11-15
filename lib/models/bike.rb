@@ -12,10 +12,7 @@ class Bike < Vehicle
 	def describe
 		puts "------- Bike -----------"
 		super
-		puts "########################"
-	end
-
-	def rims_cost
-		wheels * 100
+		puts "Rims: #{rim.model}"
+		puts '-----------------------'
 	end
 end

@@ -1,6 +1,7 @@
+require_relative 'rim'
+
 class Vehicle
-  attr_reader :model, :colour, :wheels
-	attr_writer :model, :colour, :wheels
+  attr_accessor :model, :colour, :wheels, :rim
 
 	@@vehicles_count = 0
 
@@ -16,11 +17,12 @@ class Vehicle
 		@model = model
 		@colour = colour
 		@wheels = wheels
+		@rim = Rim.new('BMW series 3')
 		self.class.increment_vehicles_count
 	end
 
 	def rims_cost
-		raise 'Not implemented'
+		rim.cost(self)
 	end
 
 	def describe
