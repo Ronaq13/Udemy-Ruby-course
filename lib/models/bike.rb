@@ -5,8 +5,8 @@ class Bike < Vehicle
 		self.get_vehicles_count
 	end
 
-	def initialize(model, colour, wheels = 2)
-		super(model, colour, wheels)
+	def initialize(args)
+		super(defaults.merge(args))
 	end
 
 	def describe
@@ -14,5 +14,13 @@ class Bike < Vehicle
 		super
 		puts "Rims: #{rim.model}"
 		puts '-----------------------'
+	end
+
+	private
+
+	def defaults
+		super.merge({
+			wheels: 2
+		})
 	end
 end

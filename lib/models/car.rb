@@ -8,9 +8,10 @@ class Car < Vehicle
 		self.get_vehicles_count
 	end
 
-	def initialize(model, colour, wheels = 4)
-		@stereo = Stereo.new('Harman Kardon')
-		super(model, colour, wheels)
+	def initialize(args)
+		stereo_model = args.fetch(:stereo_model, defaults[:stereo_model])
+		add_stereo(stereo_model)
+		super(defaults.merge(args))
 	end
 
 	def describe
@@ -18,5 +19,18 @@ class Car < Vehicle
 		super
 		puts "Stereo: #{stereo.model} ; Rims: #{rim.model}"
 		puts '-----------------------'
+	end
+
+	private
+
+	def defaults
+		super.merge({
+			wheels: 4,
+			stereo_model: 'Harman Kardon'
+		})
+	end
+
+	def add_stereo(stereo_model)
+		@stereo = Stereo.new(stereo_model)
 	end
 end

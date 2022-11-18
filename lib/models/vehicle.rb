@@ -13,11 +13,12 @@ class Vehicle
 		@@vehicles_count
 	end
 
-	def initialize(model, colour, wheels = 0)
-		@model = model
-		@colour = colour
-		@wheels = wheels
-		@rim = Rim.new('BMW series 3')
+	def initialize(args)
+		@model = args.fetch(:model, defaults[:model])
+		@colour = args.fetch(:colour, defaults[:colour])
+		@wheels = args.fetch(:wheels, defaults[:wheels])
+		rim_model = args.fetch(:rim_model, defaults[:rim_model])
+		add_rim(rim_model)
 		self.class.increment_vehicles_count
 	end
 
@@ -54,5 +55,18 @@ class Vehicle
 		distance/fuel
 	rescue ZeroDivisionError
 		puts 'Fuel cannot be zero!!'
+	end
+
+	def add_rim(rim_model)
+		@rim = Rim.new(rim_model)
+	end
+
+	def defaults
+		{
+			model: 'BMW',
+			colour: 'Black',
+			wheels: 0,
+			rim_model: 'BMW series 3'
+		}
 	end
 end
