@@ -23,7 +23,11 @@ class Vehicle
 	end
 
 	def rims_cost
-		rim.cost(self)
+		(wheels * rim_cost) + service_charge
+	end
+
+	def rim_cost
+		raise 'Please specify the cost of a rim'
 	end
 
 	def describe
@@ -60,6 +64,10 @@ class Vehicle
 	def add_rim(rim_model)
 		@rim = Rim.new(rim_model)
 	end
+
+	def service_charge
+    200
+  end
 
 	def defaults
 		{

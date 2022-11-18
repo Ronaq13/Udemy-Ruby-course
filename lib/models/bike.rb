@@ -16,6 +16,10 @@ class Bike < Vehicle
 		puts '-----------------------'
 	end
 
+	def rim_cost
+		100
+	end
+
 	private
 
 	def defaults

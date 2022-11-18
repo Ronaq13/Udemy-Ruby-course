@@ -14,9 +14,9 @@ s1000rr = Bike.new({
 })
 
 # s1000rr.compare_mileage(audi)
-# puts audi.rims_cost
-# puts s1000rr.rims_cost
+puts audi.rims_cost
+puts s1000rr.rims_cost
 
-audi.describe
+# audi.describe
 
-s1000rr.describe
+# s1000rr.describe
