@@ -1,4 +1,5 @@
 require 'yaml'
+require 'byebug'
 require_relative 'services/build_vechile'
 
 build_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'build.yaml'))
