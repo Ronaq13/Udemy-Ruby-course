@@ -21,14 +21,14 @@ s1000rr = Bike.new({
 
 # s1000rr.describe
 
-# about_file_path = './public/about.txt'
-puts File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
 about_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
-# Open
+
+# Writing
+File.open(about_file_path, 'w') do |file|
+  file.write('We are a new company in this town')
+end
+
+# Reading
 file = File.open(about_file_path)
-
-# Read
 p file.readlines.map { |line| line.chomp }
-
-# Close
 file.close
