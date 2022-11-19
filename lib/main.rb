@@ -14,9 +14,21 @@ s1000rr = Bike.new({
 })
 
 # s1000rr.compare_mileage(audi)
-puts audi.rims_cost
-puts s1000rr.rims_cost
+# puts audi.rims_cost
+# puts s1000rr.rims_cost
 
 # audi.describe
 
 # s1000rr.describe
+
+# about_file_path = './public/about.txt'
+puts File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
+about_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
+# Open
+file = File.open(about_file_path)
+
+# Read
+p file.readlines.map { |line| line.chomp }
+
+# Close
+file.close
