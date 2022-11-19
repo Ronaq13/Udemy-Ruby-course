@@ -1,3 +1,4 @@
+require 'yaml'
 require_relative 'models/car'
 require_relative 'models/bike'
 
@@ -21,14 +22,20 @@ s1000rr = Bike.new({
 
 # s1000rr.describe
 
-about_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
+# about_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'public', 'about.txt'))
 
-# Writing
-File.open(about_file_path, 'w') do |file|
-  file.write('We are a new company in this town')
-end
+# # Writing
+# File.open(about_file_path, 'w') do |file|
+#   file.write('We are a new company in this town')
+# end
 
-# Reading
-file = File.open(about_file_path)
-p file.readlines.map { |line| line.chomp }
-file.close
+# # Reading
+# file = File.open(about_file_path)
+# p file.readlines.map { |line| line.chomp }
+# file.close
+
+build_file_path = File.expand_path(File.join(File.dirname(__FILE__), 'build.yaml'))
+
+vechiles = YAML.load_file(build_file_path)
+
+p vechiles

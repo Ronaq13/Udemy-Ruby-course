@@ -1,0 +1,10 @@
+cars:
+  - model: 'Audi A3'
+    colour: 'Grey'
+    stereo_model: 'Bang & Olufsen'
+  - model: 'BMW 520 D'
+    colour: 'White'
+
+bikes:
+  - model: 'BMW S1000RR'
+    colour: 'Blue'
